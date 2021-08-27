@@ -23,17 +23,17 @@ const url = "https://api.rawg.io/api/games?dates=2019-01-01,2019-12-31&ordering=
 const resultsContainer = document.querySelector(".results"); 
 
 async function makeApiCall() {
- try }
-      const response = await fetch(url); 
+//     try {
+//       const response = await fetch(url); 
 
-      const results = await response.json(); 
+//       const results = await response.json(); 
 
-      console.log(results); 
+//       console.log(results); 
 
-    } catch (error) {
-        console.log(error); 
-        resultsContainer.innerHTML = error 
-    }
-}
+//     } catch (error) {
+//         console.log(error); 
+//         resultsContainer.innerHTML = error 
+//     }
+// }
 
-makeApiCall(); 
+// makeApiCall(); 
