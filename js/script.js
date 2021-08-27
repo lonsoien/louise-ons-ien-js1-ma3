@@ -19,21 +19,30 @@ console.log(result);
 
 const url = "https://api.rawg.io/api/games?dates=2019-01-01,2019-12-31&ordering=-rating&key=cb8d323d50cb4dcda4f983564d011c98";
 
-// this still not added in html
-const resultsContainer = document.querySelector(".results"); 
+
+const resultsContainer = document.querySelector(".results");
 
 async function makeApiCall() {
-//     try {
-//       const response = await fetch(url); 
+    try { 
+        const response = await fetch(url); 
 
-//       const results = await response.json(); 
+        const results = await response.json(); 
 
-//       console.log(results); 
+        const facts = results.all; 
 
-//     } catch (error) {
-//         console.log(error); 
-//         resultsContainer.innerHTML = error 
-//     }
-// }
+        for (let i = 0; < facts.length; i++) {
+            console.log(facts.[i].text); 
 
-// makeApiCall(); 
+            resultsContainer.innerHTML
+        }
+    }
+
+        //console.log(results); 
+
+    } catch (error) {
+        console.log(error); 
+        resultsContainer.innerHTML = error
+    }
+}
+
+makeApiCall(); 
